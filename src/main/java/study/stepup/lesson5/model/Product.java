@@ -5,15 +5,9 @@ import lombok.*;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "tpp_product")
-//@Setter
-//@Getter
-//@ToString
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
