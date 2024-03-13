@@ -12,9 +12,6 @@ import java.util.List;
 @AllArgsConstructor
 public class ResponseProduct {
     private String instanceId;
-    private Integer registerId;
+    private String registerId;
     private List<Integer> supplementaryAgreementId = new ArrayList<>();
-    public void addAgreement(Integer i){
-        supplementaryAgreementId.add(i);
-    }
 }

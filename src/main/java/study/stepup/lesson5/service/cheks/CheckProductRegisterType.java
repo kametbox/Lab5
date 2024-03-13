@@ -5,11 +5,9 @@ import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
-import study.stepup.lesson5.model.data.Product;
 import study.stepup.lesson5.model.data.ProductRegisterType;
 import study.stepup.lesson5.model.request.ProductModel;
 import study.stepup.lesson5.repository.ProductRegisterTypeRepository;
-import study.stepup.lesson5.repository.ProductRepository;
 
 
 @Component

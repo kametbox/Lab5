@@ -21,22 +21,20 @@ public class CreateProductService {
     private final AddAgreementsProcess addAgreementsProcess;
     private final ProductRepository productRepository;
 
-    private Product product;
 
     public ResponseProduct create(ProductModel productModel){
         System.out.println("CreateProductService.create " + "productModel.getInstanceId()= "+ productModel.getInstanceId());
 
         //выполняем контроли Product
-        checksProductList.stream().forEach(x -> x.start(productModel));
+        checksProductList.forEach(x -> x.start(productModel));
 
         //выполняем контроли Agreements
         for (AgreementModel agreementModel : productModel.getInstanceArrangement()){
-            checksAgreementsList.stream().forEach(x -> x.start(agreementModel));
+            checksAgreementsList.forEach(x -> x.start(agreementModel));
         }
 
-        ResponseProduct responseProduct = new ResponseProduct();
-
         //если не прислали ID то создаем РКО.
+        Product product;
         if (productModel.getInstanceId()==null) {
             product = addProductProcess.add(productModel);
         } else {
@@ -47,8 +45,9 @@ public class CreateProductService {
         List<Integer> listIdAgreements = addAgreementsProcess.add(productModel, product);
 
         //дополняем responseProduct данными из Product
+        ResponseProduct responseProduct = new ResponseProduct();
         responseProduct.setInstanceId(String.valueOf(product.getId()));
-        responseProduct.setRegisterId(product.getProductRegisterId().getId());
+        responseProduct.setRegisterId(String.valueOf(product.getProductRegisterId().getId()));
         responseProduct.setSupplementaryAgreementId(listIdAgreements);
 
         System.out.println(responseProduct.toString());

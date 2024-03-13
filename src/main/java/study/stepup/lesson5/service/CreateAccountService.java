@@ -2,7 +2,6 @@ package study.stepup.lesson5.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import study.stepup.lesson5.model.request.AccountModel;
 import study.stepup.lesson5.service.cheks.CheckRequired;
 
 @Service

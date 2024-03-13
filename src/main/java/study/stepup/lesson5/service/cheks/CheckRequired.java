@@ -19,7 +19,7 @@ public class CheckRequired implements ChecksProduct, ChecksAgreements {
                 field.setAccessible(true);
 
                 try {
-                    if (field.get(obj) == null || field.get(obj).toString().equals("")
+                    if (field.get(obj) == null || field.get(obj).toString().isEmpty()
                             || field.get(obj).toString().equals("0"))
                         throw new HttpClientErrorException(HttpStatus.BAD_REQUEST
                                 , ": Имя обязательного параметра <" + field.getName() + "> не заполнено.");
