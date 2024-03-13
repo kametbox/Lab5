@@ -19,7 +19,7 @@ public class ResponseError {
             this.message = exception.getMessage()
                     + " Стек вызова: "
                     + Arrays.stream(exception.getStackTrace())
-                    .map(s -> s.toString()).collect(Collectors.joining(" \n "))
+                    .map(StackTraceElement::toString).collect(Collectors.joining(" \n "))
             ;
         }
     }

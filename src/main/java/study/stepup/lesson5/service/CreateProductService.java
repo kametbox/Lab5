@@ -50,7 +50,7 @@ public class CreateProductService {
         responseProduct.setRegisterId(String.valueOf(product.getProductRegisterId().getId()));
         responseProduct.setSupplementaryAgreementId(listIdAgreements);
 
-        System.out.println(responseProduct.toString());
+        System.out.println(responseProduct);
 
         return responseProduct;
     }
