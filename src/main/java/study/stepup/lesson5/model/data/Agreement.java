@@ -1,4 +1,4 @@
-package study.stepup.lesson5.model;
+package study.stepup.lesson5.model.data;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,7 +16,7 @@ public class Agreement {
     private int id;
 
     @ManyToOne
-    @JoinColumn (name="product")
+    @JoinColumn (name="product_id")
     private Product product;
 
     @Column(name = "currency_code")

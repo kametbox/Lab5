@@ -2,7 +2,7 @@ package study.stepup.lesson5.contoller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import study.stepup.lesson5.model.Book;
+import study.stepup.lesson5.model.data.Book;
 import study.stepup.lesson5.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
-public class ServiceController {
+public class BookController {
     private final BookService service;
 
     @GetMapping("/api/v1/books/{id}")

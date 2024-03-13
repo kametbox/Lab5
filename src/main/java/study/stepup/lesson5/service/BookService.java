@@ -1,6 +1,6 @@
 package study.stepup.lesson5.service;
 
-import study.stepup.lesson5.model.Book;
+import study.stepup.lesson5.model.data.Book;
 import study.stepup.lesson5.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package study.stepup.lesson5.model;
+package study.stepup.lesson5.model.data;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,10 +1,13 @@
-package study.stepup.lesson5.model;
+package study.stepup.lesson5.model.data;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "tpp_product")
@@ -26,7 +29,7 @@ public class Product {
     private int priority;
 
     @Column(name = "date_of_conclusion")
-    private Timestamp dateOfConclusion;
+    private Date dateOfConclusion;
 
     @Column(name = "start_date_time")
     private LocalDateTime startDateTime;
@@ -52,6 +55,15 @@ public class Product {
     @Column(name = "reason_close")
     private String reasonClose;
     private String state;
+
+    @OneToOne(mappedBy = "productId", cascade = CascadeType.ALL, orphanRemoval = true)
+    //@JoinColumn (name="id")
+    private ProductRegister productRegisterId;
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    //@JoinColumn (name="id")
+    private List<Agreement> agreements = new ArrayList<>();
+
 //    @Transient
 //    @OneToMany(mappedBy = "product_id", cascade = CascadeType.ALL, orphanRemoval = true)
 //    private List<ProductRegister> registers = new ArrayList<>();

@@ -2,11 +2,12 @@ package study.stepup.lesson5.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import study.stepup.lesson5.model.Product;
+import study.stepup.lesson5.model.data.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product,Integer> {
     //Product findFirstByNumber(String number);
+    Product findFirstByNumber(String number);
 
     //Product findFirstById(Integer instanceId);
 
