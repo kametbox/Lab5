@@ -16,8 +16,7 @@ import study.stepup.lesson5.repository.ProductRepository;
 //контролируем Product на дубли
 public class CheckDoubleProduct implements ChecksProduct {
     private final ProductRepository productRepository;
-    public void start(Object object) {
-        ProductModel productModel = (ProductModel) object;
+    public void start(ProductModel productModel) {
         if (productModel.getInstanceId()==null) {
             Product prod = productRepository.findFirstByNumber(productModel.getContractNumber());
             System.out.println("контролируем Product на дубли");

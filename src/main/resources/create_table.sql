@@ -104,3 +104,15 @@ CREATE TABLE IF NOT EXISTS tpp_product_register
     state VARCHAR(200),
     account_number VARCHAR(200)
 );
+
+INSERT INTO account_pool
+(id, branch_code, currency_code, mdm_code, priority_code, registry_type_code)
+VALUES
+    (105,'81','643','12541213','00','03.012.002_47533_ComSoLd'),
+    (106,'81','643','125213','00','03.012.002_47533_ComSoLd');
+
+INSERT INTO account
+(id, account_number, account_pool_id)
+VALUES
+    (5,'40702810500000000001',105),
+    (7,'40702810500000000002',106);

@@ -20,8 +20,7 @@ import study.stepup.lesson5.repository.ProductRepository;
 public class CheckDoubleAgreements implements ChecksProduct {
     private final ProductRepository productRepository;
     private final AgreementsRepository agreementsRepository;
-    public void start(Object object) {
-        ProductModel productModel = (ProductModel) object;
+    public void start(ProductModel productModel) {
         //если ID РКО не было задано, то у нас новый РКО и у него еще нет доп.согласшений
         if (productModel.getInstanceId()!=null) {
             for (AgreementModel agreementModel : productModel.getInstanceArrangement()) {

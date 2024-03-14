@@ -14,11 +14,9 @@ import study.stepup.lesson5.repository.ProductRepository;
 @RequiredArgsConstructor
 @Order(3)
 //проверка наличия продукта для контроля Создания доп.соглашения
-public class CheckProdExists implements ChecksProduct {
+public class CheckProdExistsForProduct implements ChecksProduct {
     private final ProductRepository productRepository;
-    public void start(Object object) {
-
-        ProductModel productModel = (ProductModel) object;
+    public void start(ProductModel productModel) {
         if (productModel.getInstanceId()!=null) {
             Product prod = productRepository.findFirstByNumber(productModel.getContractNumber());
             System.out.println("проверка наличия продукта для контроля Создания доп.соглашения");

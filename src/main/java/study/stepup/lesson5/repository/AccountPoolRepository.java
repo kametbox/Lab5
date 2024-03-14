@@ -6,4 +6,5 @@ import study.stepup.lesson5.model.data.AccountPool;
 
 @Repository
 public interface AccountPoolRepository extends JpaRepository<AccountPool,Integer> {
+  AccountPool findFirstByBranchCodeAndCurrencyCodeAndMdmCodeAndPriorityCodeAndRegistryTypeCode(String branchCode, String currencyCode, String mdmCode, String priorityCode, String registryTypeCode);
 }

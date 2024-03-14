@@ -6,5 +6,5 @@ import study.stepup.lesson5.model.data.ProductRegister;
 
 @Repository
 public interface ProductRegisterRepository extends JpaRepository<ProductRegister,Integer> {
-    //ProductRegister findFirstByProduct_idAndType_value(int product, String type);
+    ProductRegister findFirstByProductId_Id(int id);
 }

@@ -9,6 +9,7 @@ import study.stepup.lesson5.model.response.ResponseProduct;
 import study.stepup.lesson5.repository.ProductRepository;
 import study.stepup.lesson5.service.cheks.ChecksAgreements;
 import study.stepup.lesson5.service.cheks.ChecksProduct;
+import study.stepup.lesson5.service.cheks.ChecksRequestModel;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ import java.util.List;
 public class CreateProductService {
     private final List<ChecksProduct> checksProductList;
     private final List<ChecksAgreements> checksAgreementsList;
+    private final List<ChecksRequestModel> checksRequestModelList;
     private final AddProductProcess addProductProcess;
     private final AddAgreementsProcess addAgreementsProcess;
     private final ProductRepository productRepository;
@@ -25,6 +27,8 @@ public class CreateProductService {
     public ResponseProduct create(ProductModel productModel){
         System.out.println("CreateProductService.create " + "productModel.getInstanceId()= "+ productModel.getInstanceId());
 
+        //контроль модели на обязательность реквизитов
+        checksRequestModelList.forEach(x -> x.start(productModel));
         //выполняем контроли Product
         checksProductList.forEach(x -> x.start(productModel));
 

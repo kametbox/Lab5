@@ -11,7 +11,7 @@ import java.lang.reflect.Field;
 @Component
 @Order(1)
 //проверка на обязательность реквизитов
-public class CheckRequired implements ChecksProduct, ChecksAgreements {
+public class CheckRequired implements ChecksRequestModel {
     public void start(Object obj) {
         System.out.println("проверка на обязательность реквизитов" + obj.getClass().getTypeName());
         for (Field field : obj.getClass().getDeclaredFields()) {

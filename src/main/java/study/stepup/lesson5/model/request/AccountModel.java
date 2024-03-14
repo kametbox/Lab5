@@ -13,8 +13,8 @@ public class AccountModel {
     String branchCode;
     String priorityCode;
     String mdmCode;
-    String salesCode;
     String clientCode;
     String trainRegion;
     String counter;
+    String salesCode;
 }

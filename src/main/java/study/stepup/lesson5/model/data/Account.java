@@ -15,9 +15,7 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    //@Column(name = "account_pool_id")
     @ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "id")
     @JoinColumn(name = "account_pool_id")
     private AccountPool accountPoolId;
 

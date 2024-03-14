@@ -8,6 +8,7 @@ import study.stepup.lesson5.model.data.Product;
 public interface ProductRepository extends JpaRepository<Product,Integer> {
     //Product findFirstByNumber(String number);
     Product findFirstByNumber(String number);
+    Product findFirstById(Integer id);
 
     //Product findFirstById(Integer instanceId);
 

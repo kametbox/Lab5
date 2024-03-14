@@ -16,8 +16,7 @@ import study.stepup.lesson5.repository.ProductRegisterTypeRepository;
 //Проверяем что существует указанный тип счета/код продукта
 public class CheckProductRegisterType implements ChecksProduct {
     private final ProductRegisterTypeRepository productRegisterTypeRepository;
-    public void start(Object object) {
-        ProductModel productModel = (ProductModel) object;
+    public void start(ProductModel productModel) {
         if (productModel.getInstanceId()==null) {
             ProductRegisterType productRegisterType = productRegisterTypeRepository.findFirstByProductClassCode_ValueAndAccountType_Value(productModel.getProductCode(),"Клиентский");
             System.out.println("Проверяем что существует указанный тип счета/код продукта");
