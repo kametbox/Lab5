@@ -6,17 +6,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import study.stepup.lesson5.model.data.Account;
 import study.stepup.lesson5.model.data.AccountPool;
-import study.stepup.lesson5.model.data.Product;
 import study.stepup.lesson5.model.request.AccountModel;
-import study.stepup.lesson5.model.request.AgreementModel;
-import study.stepup.lesson5.model.request.ProductModel;
 import study.stepup.lesson5.model.response.ResponseAccountId;
-import study.stepup.lesson5.model.response.ResponseProduct;
 import study.stepup.lesson5.repository.AccountPoolRepository;
 import study.stepup.lesson5.repository.AccountRepository;
-import study.stepup.lesson5.service.cheks.CheckRequired;
 import study.stepup.lesson5.service.cheks.ChecksAccount;
-import study.stepup.lesson5.service.cheks.ChecksProduct;
 import study.stepup.lesson5.service.cheks.ChecksRequestModel;
 
 import java.util.List;
