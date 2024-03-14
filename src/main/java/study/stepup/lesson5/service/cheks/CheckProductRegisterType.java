@@ -19,7 +19,7 @@ public class CheckProductRegisterType implements ChecksProduct {
     public void start(ProductModel productModel) {
         if (productModel.getInstanceId()==null) {
             ProductRegisterType productRegisterType = productRegisterTypeRepository.findFirstByProductClassCode_ValueAndAccountType_Value(productModel.getProductCode(),"Клиентский");
-            System.out.println("Проверяем что существует указанный тип счета/код продукта");
+            //System.out.println("Проверяем что существует указанный тип счета/код продукта");
             if (productRegisterType == null) throw new HttpClientErrorException(HttpStatus.NOT_FOUND
                     , ": КодПродукта <" + productModel.getProductCode() + "> не найдено в Каталоге продуктов");
         }

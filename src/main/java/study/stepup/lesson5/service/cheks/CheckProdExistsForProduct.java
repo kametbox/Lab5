@@ -18,7 +18,7 @@ public class CheckProdExistsForProduct implements ChecksProduct {
     private final ProductRepository productRepository;
     public void start(ProductModel productModel) {
         if (productModel.getInstanceId()!=null) {
-            System.out.println("проверка наличия продукта для контроля Создания доп.соглашения");
+            //System.out.println("проверка наличия продукта для контроля Создания доп.соглашения");
             Product prod = productRepository.findFirstByNumber(productModel.getContractNumber());
             if (prod == null) throw new HttpClientErrorException( HttpStatus.NOT_FOUND
                     ,": Экземпляр продукта с параметром contractNumber <"+productModel.getContractNumber()+"> не найден");

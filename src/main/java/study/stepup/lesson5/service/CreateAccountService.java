@@ -25,7 +25,7 @@ public class CreateAccountService {
 
 
     public ResponseAccountId create(AccountModel accountModel){
-        System.out.println("CreateAccountService.create " + "accountModel.getInstanceId()= "+ accountModel.getInstanceId());
+        //System.out.println("CreateAccountService.create " + "accountModel.getInstanceId()= "+ accountModel.getInstanceId());
 
         //контроль модели на обязательность реквизитов
         checksRequestModelList.forEach(x -> x.start(accountModel));
@@ -35,11 +35,7 @@ public class CreateAccountService {
 
         //ищем счет в пуле счетов и длобавляем его в продуктовый регистр
         //предполагается, что счет будет предварительно добавлен в пул другим сервисом
-        System.out.println("accountModel"+ "\n" + accountModel.getBranchCode()+"\n"+
-                accountModel.getCurrencyCode()+"\n"+
-                accountModel.getMdmCode()+"\n"+
-                accountModel.getPriorityCode()+"\n"+
-                accountModel.getRegistryTypeCode());
+
         AccountPool accountPool = accountPoolRepository
                 .findFirstByBranchCodeAndCurrencyCodeAndMdmCodeAndPriorityCodeAndRegistryTypeCode(
                         accountModel.getBranchCode(),
@@ -48,17 +44,17 @@ public class CreateAccountService {
                         accountModel.getPriorityCode(),
                         accountModel.getRegistryTypeCode()
                 );
-        System.out.println("accountPool"+accountPool);
+        //System.out.println("accountPool"+accountPool);
         //берем первый счет
         Account account = accountRepository.findFirstByAccountPoolId(accountPool);
-        System.out.println("account"+account);
+        //System.out.println("account"+account);
 
         if (account == null) throw new HttpClientErrorException(HttpStatus.NOT_FOUND
                 , ": Для продукта с параметром instanceId <" + accountModel.getInstanceId() + "> счет с указанными параметрами отсутствует в пуле счетов");
 
 
         ResponseAccountId responseAccountId = new ResponseAccountId(String.valueOf(account.getId()));
-        System.out.println(responseAccountId);
+        //System.out.println(responseAccountId);
 
 
         return responseAccountId;

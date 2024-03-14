@@ -26,7 +26,7 @@ public class CheckDoubleAgreements implements ChecksProduct {
             for (AgreementModel agreementModel : productModel.getInstanceArrangement()) {
                 Product prod = productRepository.findFirstByNumber(productModel.getContractNumber());
                 Agreement agreement = agreementsRepository.findFirstByProductAndNumber(prod, agreementModel.getNumber());
-                System.out.println("контролируем Agreements на дубли");
+                //System.out.println("контролируем Agreements на дубли");
                 if (agreement != null) throw new HttpClientErrorException(HttpStatus.BAD_REQUEST
                         , ": Параметр № Дополнительного соглашения (сделки) Number <" + agreementModel.getNumber()
                         + "> уже существует для ЭП с ИД  <" + productModel.getInstanceId() + ">");

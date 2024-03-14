@@ -13,7 +13,7 @@ import java.lang.reflect.Field;
 //проверка на обязательность реквизитов
 public class CheckRequired implements ChecksRequestModel {
     public void start(Object obj) {
-        System.out.println("проверка на обязательность реквизитов" + obj.getClass().getTypeName());
+        //System.out.println("проверка на обязательность реквизитов" + obj.getClass().getTypeName());
         for (Field field : obj.getClass().getDeclaredFields()) {
             if (field.isAnnotationPresent(RequiredField.class)) {
                 field.setAccessible(true);

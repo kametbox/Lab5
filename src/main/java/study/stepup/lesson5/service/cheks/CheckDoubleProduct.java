@@ -19,7 +19,7 @@ public class CheckDoubleProduct implements ChecksProduct {
     public void start(ProductModel productModel) {
         if (productModel.getInstanceId()==null) {
             Product prod = productRepository.findFirstByNumber(productModel.getContractNumber());
-            System.out.println("контролируем Product на дубли");
+            //System.out.println("контролируем Product на дубли");
             if (prod != null) throw new HttpClientErrorException( HttpStatus.BAD_REQUEST
                     ,": Параметр ContractNumber № договора <"+productModel.getContractNumber()+"> уже существует для ЭП с ИД  <"+prod.getId()+">");
         }

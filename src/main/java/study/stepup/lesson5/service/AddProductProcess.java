@@ -24,7 +24,7 @@ public class AddProductProcess {
         Product product = new Product();
         ProductRegister productRegister = new ProductRegister();
 
-        System.out.println("Add Product and Add ProductRegister");
+        //System.out.println("Add Product and Add ProductRegister");
         product.setType(productModel.getProductType());
         product.setNumber(productModel.getContractNumber());
         product.setDateOfConclusion(productModel.getContractDate());
@@ -38,7 +38,7 @@ public class AddProductProcess {
         productRepository.save(product);
 
         //наполняем ProductRegister
-        System.out.println("SaveProductRegister");
+        //System.out.println("SaveProductRegister");
         ProductRegisterType productRegisterType = productRegisterTypeRepository.findFirstByProductClassCode_ValueAndAccountType_Value(productModel.getProductCode(),"Клиентский");
         //System.out.println("productRegisterType= "+ productRegisterType.toString());
 

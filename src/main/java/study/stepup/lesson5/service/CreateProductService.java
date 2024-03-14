@@ -22,7 +22,7 @@ public class CreateProductService {
 
 
     public ResponseProduct create(ProductModel productModel){
-        System.out.println("CreateProductService.create " + "productModel.getInstanceId()= "+ productModel.getInstanceId());
+        //System.out.println("CreateProductService.create " + "productModel.getInstanceId()= "+ productModel.getInstanceId());
 
         //контроль модели на обязательность реквизитов
         checksRequestModelList.forEach(x -> x.start(productModel));
@@ -46,7 +46,7 @@ public class CreateProductService {
         responseProduct.setRegisterId(String.valueOf(product.getProductRegisterId().getId()));
         responseProduct.setSupplementaryAgreementId(listIdAgreements);
 
-        System.out.println(responseProduct);
+        //System.out.println(responseProduct);
 
         return responseProduct;
     }

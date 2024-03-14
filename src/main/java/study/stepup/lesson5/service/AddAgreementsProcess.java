@@ -18,7 +18,7 @@ public class AddAgreementsProcess {
     public List<Integer> add(ProductModel productModel, Product product){
 
         //создаем Agreements
-        System.out.println("SaveAgreements");
+        //System.out.println("SaveAgreements");
         List<Integer> ret = new ArrayList<>();
 
         for (AgreementModel agreementModel : productModel.getInstanceArrangement()){

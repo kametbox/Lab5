@@ -18,7 +18,7 @@ public class CheckProdExistsForAccount implements ChecksAccount {
     private final ProductRegisterRepository productRegisterRepository;
     public void start(AccountModel accountModel) {
         ProductRegister productRegister = productRegisterRepository.findFirstByProductId_Id(accountModel.getInstanceId());
-        System.out.println("проверка наличия продукта для привязки счета");
+        //System.out.println("проверка наличия продукта для привязки счета");
         if(productRegister == null) {
             throw new HttpClientErrorException(HttpStatus.NOT_FOUND
                     , ": Экземпляр продукта с параметром instanceId <" + accountModel.getInstanceId() + "> не найден");
