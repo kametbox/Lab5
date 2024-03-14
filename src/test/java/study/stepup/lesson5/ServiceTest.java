@@ -51,17 +51,17 @@ public class ServiceTest {
                 "", 0, 0, "",
                 0, 0, "");
         productModel1 = new ProductModel(1, "ДОГОВОР", "03.012.002", "03.012.002_47533_ComSoLd",
-                "15", "2024-01-10-000001", new SimpleDateFormat("yyyy-mm-dd").parse("2024-01-10"), 2, 12.25F,
+                "15", "2024-01-10-000001", new SimpleDateFormat("yyyy-MM-dd").parse("2024-01-10"), 2, 12.25F,
                 0F, 0F, "qwerty", "0", 13F, 1000F,
                 112233, "0022", "800", "00", 1234, new AdditionalPropertiesModel(),
                 new ArrayList<>(Arrays.asList(agreementModel1, agreementModel2)));
         productModel2 = new ProductModel(1, "", "", "",
-                "", "", new SimpleDateFormat("yyyy-mm-dd").parse("2024-01-10"), 2, 12.25F,
+                "", "", new SimpleDateFormat("yyyy-MM-dd").parse("2024-01-10"), 2, 12.25F,
                 0F, 0F, "qwerty", "0", 13F, 1000F,
                 0, "0022", "800", "00", 1234, new AdditionalPropertiesModel(),
                 new ArrayList<>());
         productModel3 = new ProductModel(null, "", "", "",
-                "", "", new SimpleDateFormat("yyyy-mm-dd").parse("2024-01-10"), 2, 12.25F,
+                "", "", new SimpleDateFormat("yyyy-MM-dd").parse("2024-01-10"), 2, 12.25F,
                 0F, 0F, "qwerty", "0", 13F, 1000F,
                 0, "0022", "800", "00", 1234, new AdditionalPropertiesModel(),
                 new ArrayList<>());

@@ -43,7 +43,7 @@ public class Save2BdTest {
                 , "03.012.002_47533_ComSoLd"
                 , "15"
                 , "2024-01-10-000001"
-                , new SimpleDateFormat("yyyy-mm-dd").parse("2024-01-10")
+                , new SimpleDateFormat("yyyy-MM-dd").parse("2024-01-10")
                 , 2
                 , 12.25F
                 , 0F
