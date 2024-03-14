@@ -63,42 +63,25 @@ public class Save2BdTest {
 
     @Test
     public void AddProduct_Test() {
-        //Почистим таблицу
-        //TODO удалиить удаление нафиг или удалять только конкретную запись по реквизитам
         productRepository.deleteAll();
         productRegisterRepository.deleteAll();
 
-        //Запишем данные в таблицу
-
         new AddProductProcess(productRepository, productRegisterRepository, productRegisterTypeRepository).add(productModel);
 
-        //TODO надо искать конкретное значение, а не все подряд
-        //Проверим, что наши записи в БД есть
         Assertions.assertTrue(productRepository.count() > 0);
         Assertions.assertTrue(productRegisterRepository.count() > 0);
     }
 
     @Test
     public void SaveAgreements_Test() {
-        //TODO удалить
-        //Почистим таблицу
         productRepository.deleteAll();
-        //Подготовим связанный ЭП в БД
-        Product product1 = new AddProductProcess(productRepository, productRegisterRepository, productRegisterTypeRepository).add(productModel);
-        //Замокируем обращение к БД
-        //ProductRepository mockRepo = Mockito.mock(ProductRepository.class);
-        //Mockito.when(mockRepo.findFirstById(Mockito.any())).thenReturn(product);
 
-        //TODO удалить
-        //Почистим таблицу
+        Product product1 = new AddProductProcess(productRepository, productRegisterRepository, productRegisterTypeRepository).add(productModel);
+
         repoAgreements.deleteAll();
 
-        //Запишем данные в таблицу
         new AddAgreementsProcess(repoAgreements).add(productModel, product1);
-        //Поищем новые записи
-        //repoAgreements.findAll();
-        //Проверим, что наши записи в БД есть
-        //TODO надо искать конкретное значение, а не все подряд
+
         Assertions.assertTrue(repoAgreements.count() > 0);
     }
 

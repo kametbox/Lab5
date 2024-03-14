@@ -1,0 +1,13 @@
+{
+  "instanceId"		: 2,
+  "registryTypeCode": "03.012.002_47533_ComSoLd",
+  "accountType"		: "Клиентский",
+  "currencyCode"	: "643",
+  "branchCode"		: "81",
+  "priorityCode"	: "00",
+  "mdmCode"			: "12541213",
+  "clientCode"		: "15313215",
+  "trainRegion"		: "78",
+  "counter"			: "810",
+  "salesCode"		: "78-01"
+}

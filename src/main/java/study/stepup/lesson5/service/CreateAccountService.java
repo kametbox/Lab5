@@ -34,6 +34,7 @@ public class CreateAccountService {
         checksAccounts.forEach(x -> x.start(accountModel));
 
         //ищем счет в пуле счетов и длобавляем его в продуктовый регистр
+        //предполагается, что счет будет предварительно добавлен в пул другим сервисом
         System.out.println("accountModel"+ "\n" + accountModel.getBranchCode()+"\n"+
                 accountModel.getCurrencyCode()+"\n"+
                 accountModel.getMdmCode()+"\n"+

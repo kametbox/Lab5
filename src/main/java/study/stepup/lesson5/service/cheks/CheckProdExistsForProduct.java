@@ -12,16 +12,16 @@ import study.stepup.lesson5.repository.ProductRepository;
 
 @Component
 @RequiredArgsConstructor
-@Order(3)
+@Order(2)
 //проверка наличия продукта для контроля Создания доп.соглашения
 public class CheckProdExistsForProduct implements ChecksProduct {
     private final ProductRepository productRepository;
     public void start(ProductModel productModel) {
         if (productModel.getInstanceId()!=null) {
-            Product prod = productRepository.findFirstByNumber(productModel.getContractNumber());
             System.out.println("проверка наличия продукта для контроля Создания доп.соглашения");
+            Product prod = productRepository.findFirstByNumber(productModel.getContractNumber());
             if (prod == null) throw new HttpClientErrorException( HttpStatus.NOT_FOUND
-                    ,": Экземпляр продукта с параметром instanceId <"+productModel.getInstanceId()+"> не найден");
+                    ,": Экземпляр продукта с параметром contractNumber <"+productModel.getContractNumber()+"> не найден");
         }
     }
 }

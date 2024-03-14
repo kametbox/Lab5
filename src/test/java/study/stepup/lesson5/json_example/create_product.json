@@ -1,0 +1,84 @@
+{
+  "instanceId"   : null,
+  "productType"  : "НСО",
+  "productCode"  : "3.012.002_47533_ComSoLd",
+  "registerType" : "03.012.002",
+  "mdmCode"      : "15",
+  "contractNumber" : "ctnNumber10",
+  "contractDate" : "2024-02-19",
+  "priority"     : 1,
+  "interestRatePenalty" : 15.2,
+  "minimalBalance"  : 2.34,
+  "thresholdAmount" : 5.02,
+  "accountingDetails" : "Details",
+  "rateType"     : "0",
+  "taxPercentageRate" : 2.003,
+  "technicalOverdraftLimitAmount" : 3.01,
+  "contractId"   : 34,
+  "branchCode"   : "0022",
+  "isoCurrencyCode" : "800",
+  "urgencyCode"  : "00",
+  "referenceCode": 15,
+  "additionalPropertiesVip" : {
+    "data": [
+      {
+        "key"  : "RailwayRegionOwn",
+        "value": "ABC",
+        "name" : "Регион принадлежности железной дороги"
+      },
+      {
+        "key"  : "counter",
+        "value": "123",
+        "name" : "Счетчик"
+      }
+    ]
+  },
+  "instanceArrangement" : [
+    {
+      "generalAgreementId"      : "genId1",
+      "supplementaryAgreementId": "supId1",
+      "arrangementType"         : "type1",
+      "shedulerJobId"           : 1,
+      "number"                  : "numb5",
+      "openingDate"             : "2024-01-23",
+      "closingDate"             : "2024-03-23",
+      "cancelDate"              : "2024-02-23",
+      "validityDuration"        : 60,
+      "cancellationReason"      : "cancel",
+      "status"                  : "status",
+      "interestCalculationDate" : "2024-03-19",
+      "interestRate"            : 0.007,
+      "coefficient"             : 3.2,
+      "coefficientAction"       : "action",
+      "minimumInterestRate"     : 0.001,
+      "minimumInterestRateCoefficient" : 0.15,
+      "minimumInterestRateCoefficientAction" : "min_coef",
+      "maximalInterestRate"     : 12.2,
+      "maximalInterestRateCoefficient" : 5.06,
+      "maximalInterestRateCoefficientAction" : "max_coef"
+    },
+    {
+      "generalAgreementId"      : "22222222222222222",
+      "supplementaryAgreementId": "supId1",
+      "arrangementType"         : "type1",
+      "shedulerJobId"           : 1,
+      "number"                  : "222122",
+      "openingDate"             : "2024-01-23",
+      "closingDate"             : "2024-03-23",
+      "cancelDate"              : "2024-02-23",
+      "validityDuration"        : 60,
+      "cancellationReason"      : "cancel",
+      "status"                  : "status",
+      "interestCalculationDate" : "2024-03-19",
+      "interestRate"            : 0.007,
+      "coefficient"             : 3.2,
+      "coefficientAction"       : "action",
+      "minimumInterestRate"     : 0.001,
+      "minimumInterestRateCoefficient" : 0.15,
+      "minimumInterestRateCoefficientAction" : "min_coef",
+      "maximalInterestRate"     : 12.2,
+      "maximalInterestRateCoefficient" : 5.06,
+      "maximalInterestRateCoefficientAction" : "max_coef"
+    }
+  ]
+}
