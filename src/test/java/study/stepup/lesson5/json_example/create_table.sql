@@ -125,6 +125,6 @@ from tpp_ref_product_register_type prt1_0
         on at1_0.internal_id=prt1_0.account_type
 where pcc1_0.value='3.012.002_47533_ComSoLd'
   and at1_0.value='Клиентский'
-fetch first 1 rows only
+fetch first 1 rows only;
 
 select * from tpp_ref_product_class
