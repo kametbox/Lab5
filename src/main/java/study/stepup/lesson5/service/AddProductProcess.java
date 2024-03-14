@@ -40,7 +40,7 @@ public class AddProductProcess {
         //наполняем ProductRegister
         System.out.println("SaveProductRegister");
         ProductRegisterType productRegisterType = productRegisterTypeRepository.findFirstByProductClassCode_ValueAndAccountType_Value(productModel.getProductCode(),"Клиентский");
-        System.out.println("productRegisterType= "+ productRegisterType.toString());
+        //System.out.println("productRegisterType= "+ productRegisterType.toString());
 
         productRegister.setProductId(product);
         productRegister.setType(productRegisterType);

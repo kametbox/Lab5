@@ -29,7 +29,7 @@ public class Agreement {
     private String arrangementType;
 
     @Column(name = "sheduler_job_id")
-    private int shedulerJobId;
+    private Integer shedulerJobId;
 
     private String number;
 
@@ -43,7 +43,7 @@ public class Agreement {
     private Timestamp cancelDate;
 
     @Column(name = "validity_duration")
-    private int validityDuration;
+    private Integer validityDuration;
 
     @Column(name = "cancellation_reason")
     private String cancellationReason;
@@ -54,27 +54,27 @@ public class Agreement {
     private Timestamp interestCalculationDate;
 
     @Column(name = "interest_rate")
-    private float interestRate;
+    private Float interestRate;
 
-    private float coefficient;
+    private Float coefficient;
 
     @Column(name = "coefficient_action")
     private String coefficientAction;
 
     @Column(name = "minimum_interest_rate")
-    private float minimumInterestRate;
+    private Float minimumInterestRate;
 
     @Column(name = "minimum_interest_rate_coefficient")
-    private float minimumInterestRateCoefficient;
+    private Float minimumInterestRateCoefficient;
 
     @Column(name = "minimum_interest_rate_coefficient_action")
     private String minimumInterestRateCoefficientAction;
 
     @Column(name = "maximal_interest_rate")
-    private float maximalInterestRate;
+    private Float maximalInterestRate;
 
     @Column(name = "maximal_interest_rate_coefficient")
-    private float maximalInterestRateCoefficient;
+    private Float maximalInterestRateCoefficient;
 
     @Column(name = "maximal_interest_rate_coefficient_action")
     private String maximalInterestRateCoefficientAction;

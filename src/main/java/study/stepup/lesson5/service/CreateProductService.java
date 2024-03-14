@@ -3,11 +3,9 @@ package study.stepup.lesson5.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import study.stepup.lesson5.model.data.Product;
-import study.stepup.lesson5.model.request.AgreementModel;
 import study.stepup.lesson5.model.request.ProductModel;
 import study.stepup.lesson5.model.response.ResponseProduct;
 import study.stepup.lesson5.repository.ProductRepository;
-import study.stepup.lesson5.service.cheks.ChecksAgreements;
 import study.stepup.lesson5.service.cheks.ChecksProduct;
 import study.stepup.lesson5.service.cheks.ChecksRequestModel;
 
@@ -17,7 +15,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CreateProductService {
     private final List<ChecksProduct> checksProductList;
-    private final List<ChecksAgreements> checksAgreementsList;
     private final List<ChecksRequestModel> checksRequestModelList;
     private final AddProductProcess addProductProcess;
     private final AddAgreementsProcess addAgreementsProcess;
@@ -31,11 +28,6 @@ public class CreateProductService {
         checksRequestModelList.forEach(x -> x.start(productModel));
         //выполняем контроли Product
         checksProductList.forEach(x -> x.start(productModel));
-
-        //выполняем контроли Agreements
-        for (AgreementModel agreementModel : productModel.getInstanceArrangement()){
-            checksAgreementsList.forEach(x -> x.start(agreementModel));
-        }
 
         //если не прислали ID то создаем РКО.
         Product product;

@@ -1,10 +1,10 @@
 {
-  "instanceId"   : 123,
+  "instanceId"   : 2,
   "productType"  : "НСО",
   "productCode"  : "03.012.002",
   "registerType" : "03.012.002_47533_ComSoLd",
   "mdmCode"      : "15",
-  "contractNumber" : "ctnNumber6",
+  "contractNumber" : "ctnNumber9",
   "contractDate" : "2024-02-19",
   "priority"     : 1,
   "interestRatePenalty" : 15.2,
@@ -31,7 +31,7 @@
         "value": "123",
         "name" : "Счетчик"
       }
-    ]
+           ]
   },
   "instanceArrangement" : [
     {
@@ -39,7 +39,7 @@
       "supplementaryAgreementId": "supId1",
       "arrangementType"         : "type1",
       "shedulerJobId"           : 1,
-      "number"                  : "num6",
+      "number"                  : "numb5",
       "openingDate"             : "2024-01-23",
       "closingDate"             : "2024-03-23",
       "cancelDate"              : "2024-02-23",
@@ -58,11 +58,11 @@
       "maximalInterestRateCoefficientAction" : "max_coef"
     },
     {
-      "generalAgreementId"      : "2222222222222222222222",
+      "generalAgreementId"      : "22222222222222222",
       "supplementaryAgreementId": "supId1",
       "arrangementType"         : "type1",
       "shedulerJobId"           : 1,
-      "number"                  : "121212",
+      "number"                  : "222122",
       "openingDate"             : "2024-01-23",
       "closingDate"             : "2024-03-23",
       "cancelDate"              : "2024-02-23",
